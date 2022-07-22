@@ -12,6 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.kraftsman.compose.android.services.LotteryService
 import io.kraftsman.compose.android.ui.theme.JetpackComposeDemoTheme
 
 @Composable
@@ -45,7 +46,7 @@ fun LotteryBoard() {
             modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
         )
         Button(onClick = {
-            lotteryNumbers = (1..49).shuffled().take(6)
+            lotteryNumbers = LotteryService().generate(49)
         }) {
             Text(
                 text = "選號 🎲",
