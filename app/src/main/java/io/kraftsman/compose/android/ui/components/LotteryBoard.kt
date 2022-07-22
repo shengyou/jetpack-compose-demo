@@ -2,6 +2,7 @@ package io.kraftsman.compose.android.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -45,8 +46,10 @@ fun LotteryBoard() {
         Spacer(
             modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
         )
-        Button(onClick = {
-            lotteryNumbers = LotteryService().generate(49)
+        Button(
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red),
+            onClick = {
+                lotteryNumbers = LotteryService().generate(49)
         }) {
             Text(
                 text = "選號 🎲",
