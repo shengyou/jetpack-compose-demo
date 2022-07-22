@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import io.kraftsman.compose.android.ui.components.Ball
 import io.kraftsman.compose.android.ui.theme.JetpackComposeDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,22 +18,9 @@ class MainActivity : ComponentActivity() {
             JetpackComposeDemoTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    Ball(1, listOf(1, 2, 3, 4, 5, 6))
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    JetpackComposeDemoTheme {
-        Greeting("Android")
     }
 }
