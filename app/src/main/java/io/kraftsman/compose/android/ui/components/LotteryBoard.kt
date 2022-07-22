@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -15,7 +16,8 @@ import io.kraftsman.compose.android.ui.theme.JetpackComposeDemoTheme
 
 @Composable
 fun LotteryBoard() {
-    val lotteryNumbers = listOf(1, 2, 3, 4, 5, 6)
+    var lotteryNumbers by remember { mutableStateOf(listOf<Int>()) }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -43,7 +45,7 @@ fun LotteryBoard() {
             modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
         )
         Button(onClick = {
-
+            lotteryNumbers = (1..49).shuffled().take(6)
         }) {
             Text(
                 text = "選號 🎲",
