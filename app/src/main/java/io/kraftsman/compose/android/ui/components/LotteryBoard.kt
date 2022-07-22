@@ -2,6 +2,7 @@ package io.kraftsman.compose.android.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
@@ -60,7 +61,7 @@ fun LotteryBoard() {
 @Preview(showBackground = true)
 @Composable
 fun LotteryBoardPreview() {
-    JetpackComposeDemoTheme {
+    MaterialTheme {
         LotteryBoard()
     }
 }

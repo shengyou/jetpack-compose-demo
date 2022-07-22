@@ -3,6 +3,7 @@ package io.kraftsman.compose.android.ui.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -47,7 +48,7 @@ fun Ball(
 @Preview(showBackground = true)
 @Composable
 fun BallPreview() {
-    JetpackComposeDemoTheme {
+    MaterialTheme {
         Ball(
             displayNumber = 1,
             lotteryNumbers = listOf(1, 2, 3, 4, 5, 6)
