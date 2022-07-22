@@ -14,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.kraftsman.compose.android.services.LotteryService
-import io.kraftsman.compose.android.ui.theme.JetpackComposeDemoTheme
 
 @Composable
 fun LotteryBoard() {
